@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Offline Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Compile check
+        run: |
+          python -m py_compile app/main.py
+          python -m py_compile scripts/ingest.py
+          python -m py_compile scripts/eval.py
+          python -m py_compile scripts/cleanup.py
+
+      - name: Run tests
+        run: pytest -v
+
+  # Optional: live tests (only when secrets are configured)
+  # Uncomment and add OPENAI_API_KEY + PINECONE_API_KEY as repo secrets.
+  #
+  # live-test:
+  #   name: Live Tests
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name == 'push'
+  #   needs: test
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: "3.11"
+  #     - run: pip install -r requirements.txt
+  #     - name: Run live tests
+  #       env:
+  #         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  #         PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
+  #         PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
+  #         RUN_LIVE_TESTS: "true"
+  #       run: pytest -v

@@ -1,0 +1,112 @@
+# ── RAG Evaluation Dataset ──────────────────────────────────────────────
+# Each item: id, question (Arabic), ground_truth, expected_keywords
+# Optional: expected_source, expected_pages
+#
+# Edit this file to add/modify questions. Keep the dataset small
+# to control token costs (~10-15 questions recommended).
+# ────────────────────────────────────────────────────────────────────────
+
+- id: q01
+  question: "ما هي رؤية السعودية 2030؟"
+  ground_truth: "رؤية السعودية 2030 هي إطار استراتيجي يهدف إلى تقليل اعتماد المملكة على النفط وتنويع اقتصادها."
+  expected_keywords:
+    - "رؤية"
+    - "2030"
+    - "اقتصاد"
+    - "نفط"
+    - "تنويع"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q02
+  question: "ما هي المحاور الرئيسية لرؤية 2030؟"
+  ground_truth: "المحاور الرئيسية هي مجتمع حيوي واقتصاد مزدهر ووطن طموح."
+  expected_keywords:
+    - "مجتمع"
+    - "حيوي"
+    - "اقتصاد"
+    - "مزدهر"
+    - "وطن"
+    - "طموح"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q03
+  question: "كيف تخطط رؤية 2030 لتنويع الاقتصاد السعودي؟"
+  ground_truth: "من خلال تطوير السياحة والترفيه والتقنية وتقليل الاعتماد على النفط."
+  expected_keywords:
+    - "سياحة"
+    - "ترفيه"
+    - "تقنية"
+    - "نفط"
+    - "تنويع"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q04
+  question: "ما هو دور قطاع السياحة في رؤية 2030؟"
+  ground_truth: "تهدف الرؤية إلى تطوير قطاع السياحة وزيادة مساهمته في الناتج المحلي."
+  expected_keywords:
+    - "سياحة"
+    - "ناتج"
+    - "محلي"
+    - "تطوير"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q05
+  question: "ما هي أهداف رؤية 2030 في مجال التعليم؟"
+  ground_truth: "تحسين جودة التعليم ومخرجاته وربطه بسوق العمل."
+  expected_keywords:
+    - "تعليم"
+    - "جودة"
+    - "عمل"
+    - "مخرجات"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q06
+  question: "كيف تعزز رؤية 2030 دور المرأة في المجتمع السعودي؟"
+  ground_truth: "من خلال زيادة مشاركة المرأة في سوق العمل وتمكينها اقتصادياً واجتماعياً."
+  expected_keywords:
+    - "مرأة"
+    - "عمل"
+    - "مشاركة"
+    - "تمكين"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q07
+  question: "ما هي أهداف رؤية 2030 في القطاع الصحي؟"
+  ground_truth: "تطوير الخدمات الصحية وتحسين جودتها وزيادة كفاءة الإنفاق الصحي."
+  expected_keywords:
+    - "صحي"
+    - "خدمات"
+    - "جودة"
+    - "إنفاق"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q08
+  question: "ما هو دور صندوق الاستثمارات العامة في رؤية 2030؟"
+  ground_truth: "يعد صندوق الاستثمارات العامة المحرك الرئيسي لتنويع الاقتصاد من خلال الاستثمار في القطاعات الواعدة."
+  expected_keywords:
+    - "صندوق"
+    - "استثمار"
+    - "اقتصاد"
+    - "تنويع"
+    - "قطاعات"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q09
+  question: "كيف تدعم رؤية 2030 ريادة الأعمال والمنشآت الصغيرة؟"
+  ground_truth: "من خلال تسهيل بيئة الأعمال وتوفير التمويل وتقليل العوائق البيروقراطية."
+  expected_keywords:
+    - "أعمال"
+    - "منشآت"
+    - "صغيرة"
+    - "تمويل"
+  expected_source: "saudi_vision2030_ar.pdf"
+
+- id: q10
+  question: "ما هي أهداف رؤية 2030 في مجال الإسكان؟"
+  ground_truth: "رفع نسبة تملك المواطنين للمساكن وتوفير خيارات سكنية متنوعة وبأسعار مناسبة."
+  expected_keywords:
+    - "إسكان"
+    - "تملك"
+    - "مساكن"
+    - "مواطنين"
+  expected_source: "saudi_vision2030_ar.pdf"

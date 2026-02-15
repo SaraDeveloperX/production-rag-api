@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+pinecone
+openai
+langchain-openai
+langchain-community
+langchain-text-splitters
+python-dotenv
+slowapi
+structlog
+ragas
+datasets
+pytest
+httpx
+pyyaml

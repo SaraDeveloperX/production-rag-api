@@ -1,0 +1,36 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Secrets
+.env
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Data (large files)
+data/
+
+# Git / CI
+.git/
+.github/
+.gitignore
+.pytest_cache/
+
+# Build artifacts
+dist/
+build/
+
+# Misc
+README.md
+*.md
+tests/
+scripts/

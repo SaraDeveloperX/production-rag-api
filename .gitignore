@@ -1,0 +1,43 @@
+# ── Secrets ──
+.env
+.env.local
+.env.*.local
+
+# ── Python virtualenv ──
+venv/
+.venv/
+
+# ── Python bytecode ──
+__pycache__/
+*.pyc
+*.pyo
+
+# ── Testing / Coverage ──
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ── IDE / OS ──
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Distribution / packaging ──
+dist/
+build/
+*.egg-info/
+
+# ── Evaluation artifacts (regenerated on each run) ──
+eval/results.json
+eval/report.md
+eval/run_output*.txt
+
+# ── Sample data (PDFs are user-supplied) ──
+data/*.pdf
+
+# ── Temporary logs ──
+tests/pytest_output.txt
